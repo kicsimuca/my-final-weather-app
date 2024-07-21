@@ -10,17 +10,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="src/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <title>Final Weather App</title>
   </head>
   <body>
     <div class="weather-app">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city.."
             required
+            id="search-form-input"
             class="search-form-input"
           />
           <input type="submit" value="Search" class="search-form-button" />
@@ -29,7 +30,7 @@
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city">Paris</h1>
+            <h1 class="weather-app-city" id="city"></h1>
             <p class="weather-app-details">
               Tuesday 14:49, scattered clouds
               <br />
@@ -38,7 +39,7 @@
           </div>
           <div class="weather-app-temperature-container">
             <div class="weather-app-icon">🌤️</div>
-            <div class="weather-app-temperature">12</div>
+            <div class="weather-app-temperature" id="temperature"></div>
             <div class="weather-app-unit">°C</div>
           </div>
         </div>
@@ -46,7 +47,7 @@
 
       <footer>
         This project was coded by
-        <a href="https://github.com/kicsimuca" target="_blank">Boglarka Gyurkovics</a>,
+        <a href="https://github.com/kicsimuca" target="_blank"> Boglarka Gyurkovics</a>,
         is
         <a href="https://github.com/kicsimuca/my-final-weather-app" target="_blank"
           >open-sourced on GitHub</a
